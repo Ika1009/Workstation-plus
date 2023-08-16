@@ -1,0 +1,40 @@
+{
+  "searchURL": "https://find.dsrcnav.com/results.aspx?gd=RD1003162&searchsource=69&n=31&q=<keyword>",
+  "thankYouPage": true,
+  "thankYouPageURL": "https://www.my-daily-inspiration.com/thankyou.html",
+  "postUninstall": false,
+  "postUninstallURL": "https://www.my-daily-inspiration.com/post-uninstall.html",
+  "sideBarLink": true,
+  "shading": true,
+  "quoteAreaBoxBgStatus": true,
+  "quoteAreaBoxBgColor": "#1c1c1cb5",
+  "quoteTextColor": "#ffffff",
+  "authorTextColor": "#ccc",
+  "quotesUrl": "./tmp/q.bin",
+  "backgroundsUrl": "./tmp/b.bin",
+  "quoteFontSizes": ["30px", "35px", "40px", "45px", "50px"],
+  "authorFontSizes": ["15px", "20px", "25px", "30px", "35px"],
+  "quoteFontList": [
+    "fonts/arial.ttf",
+    "fonts/Quicksand-VariableFont_wght.ttf",
+    "fonts/JosefinSans-Italic-VariableFont_wght.ttf",
+    "fonts/JosefinSans-Italic-VariableFont_wght.ttf",
+    "fonts/arial.ttf",
+    "fonts/arial.ttf"
+  ],
+  "authorFontList": [
+    "fonts/arial.ttf",
+    "fonts/Quicksand-VariableFont_wght.ttf",
+    "fonts/JosefinSans-Italic-VariableFont_wght.ttf",
+    "fonts/DancingScript-VariableFont_wght.ttf",
+    "fonts/Pacifico-Regular.ttf",
+    "fonts/Pacifico-Regular.ttf"
+  ],
+  "footerLinks":{
+    "about":"https://www.my-daily-inspiration.com", 
+    "privacy":"https://www.my-daily-inspiration.com/privacy-policy.html", 
+    "terms":"https://www.my-daily-inspiration.com/terms.html", 
+    "uninstall":"https://www.my-daily-inspiration.com/uninstall.html", 
+    "contact":"https://www.my-daily-inspiration.com/#contacts"
+  }
+}

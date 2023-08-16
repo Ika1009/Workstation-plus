@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>New Tab - Daily Inspiration</title>
+  <link rel="stylesheet" href="newTab.css" />
+</head>
+<!-- style="background: url('images/bg.jpg');" -->
+
+<body>
+  <div class="bg-section" ></div>
+  <div class="container">
+
+    <div class="topBar">
+      <div class="weatherArea"></div>
+      <div class="search-section">
+        <form autocomplete="off" action="#">
+          <div class="searchInput-section">
+            <input id="myInput" type="text" placeholder="Search" autofocus>
+            <div class="searchIcon">
+              <img src="images/icons8-search.svg" alt="">
+            </div>
+          </div>
+          <div class="suggestion-area"></div>
+        </form>
+      </div>
+      <div class="clock-section">
+        <div class="time"></div>
+        <div class="date"></div>
+      </div>
+    </div>
+
+
+    <div class="menu">
+      <a href="#" class="about" target="_blank" rel="noopener">About</a> |
+      <a href="#" class="privacy" target="_blank" rel="noopener">Privacy</a> |
+      <a href="#" class="terms" target="_blank" rel="noopener">Terms</a> |
+      <a href="#" class="uninstall" target="_blank" rel="noopener">Uninstall</a> |
+      <a href="#" class="contact" target="_blank" rel="noopener">Contact</a> 
+      <!-- id="uninstall" -->
+    </div>
+
+    <div class="sticky-note__btns">
+      <span class="sticky-note__add">
+          <img src="images/notes.png" width="61px" alt="">
+          <div>
+            <span class="material-icons">add</span>
+            <span> Sticky Note</span> 
+          </div>
+      </span>
+      <ul class="stickyNoteMenu">
+          <li class="sticky-note__add">Add New</li>
+          <li class="sticky-note__hide-all">Hide All</li>
+          <li class="sticky-note__show-all">Show All</li>
+      </ul>
+    </div>
+
+    <div class="mytasks-section">
+      <span class="mytasksBtn">
+        <img src="images/todo.png" width="61px" alt="">
+        <span>My Tasks</span>
+      </span>
+      <div class="tasksListArea">
+        <a href="#" class="cencelBtn"><img src="images/cancel.png" alt="cencel"></a>
+        <div class="headSection">
+          <div class="current_category_setion">
+            <h4 class="current_category">today</h4>
+            <span class="addCategory">
+              <img src="images/icons8-chevron-down-26.png" alt="">
+            </span>
+          </div>
+          <ul class="categoryListArea"></ul>
+        </div><br>
+        <ul class="taskList"></ul><br>
+        <form action="#" class="newTaskForm">
+          <input type="text" class="newTaskInput" placeholder="Type new task...">
+          <a href="#" class="newTaskAddBtn" style="display: none;"><img src="images/icons8-tick-24.png" alt=""></a>
+        </form>
+      </div>
+    </div>
+
+
+    <span class="realoadBtn" title="Change Background"><img src="images/reloadIcon.png" alt=""></span>
+
+  </div>
+  
+  <script src="newTab.js"></script>
+</body>
+
+</html>

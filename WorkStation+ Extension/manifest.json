@@ -1,0 +1,22 @@
+{
+   "background": {
+      "service_worker": "background.js"
+   },
+   "chrome_url_overrides": {
+      "newtab": "newtab.html"
+   },
+   "description": "Brings you inspiration & motivational quotes, wallpapers, clock, weather, sticky notes, to-do and more, when you open a new tab.",
+   "icons": {
+      "128": "icons/icon_128.png",
+      "16": "icons/icon_16.png",
+      "32": "icons/icon_32.png",
+      "48": "icons/icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoIQ3m4ygiqYLGiy9xuwEYf7IWr3C+YAuB6R5aYUZNr0YzlqiQSCfbYUWCXCsBPwj/8ZwvFgXuG686nEhJMeNdU9fC68js3vqTfcectSeGkTlDRngeSgIa4/1wzNl977LrwT2YPS758nPNmIhehkPnhuTArmHPm/QXP5Sf/1xOl3fT5Oll/Qmx5jmA4geOHGlAiiXx353bHqja6+hHVV51ikhYJiGXy1R2p4msQ84HPjPx7BSwgDu9+97PKqPFJ3ewLU39wME5aVKknZfLCe/UFxTN5Bfd3Qg+Moq8KU9CV5MBk/bXcsHGMba05tkZdj2I/CQUMoZ4iizYKIeIRvccQIDAQAB",
+   "manifest_version": 3,
+   "name": "Daily Inspiration",
+   "optional_permissions": [ "topSites", "favicon", "history" ],
+   "permissions": [ "storage", "unlimitedStorage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "6.0"
+}
