@@ -38,32 +38,58 @@ body {
 .weatherArea,
 .logo-section,
 .clock-section {
-  width: 16vw;
+  /*width: 16vw;*/
 }
 
 /* top bar style  */
+
 .topBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    height: 33vh;
+}
+
+.midBar {
+  display: block;
+  vertical-align: central;
+  justify-items: center;
   width: 100%;
   height: 33vh;
   padding: 50px 60px;
 }
 
+.midBar {
+    display: block;
+
+    justify-items: center;
+    align-items: center;
+
+    justify-content: center;
+    align-content: center;
+
+    text-align: center;
+
+    vertical-align: central;
+
+    width: 45%;
+    min-width: 500px;
+    height: auto;
+    /*padding: 50px 60px;*/
+}
+
 .logo-section img {
-  width: 127px;
+    width: 127px;
 }
 
 
 /* search input style  */
 .searchInput-section {
-  position: relative;
+    position: relative;
+    margin: 50px 0 0 0;
 }
 
 .search-section {
-  width: 60vw;
-  opacity: 0;
+    /*width: 60vw;*/
+    opacity: 0;
+    padding: 10px 0px 0px 0px;
 }
 .search-section form {
   width: 73%;
@@ -169,9 +195,11 @@ body {
 }
 
 .time {
-  font-size: 44px;
+  font-size: 60pt;
   font-weight: bold;
+  font-family: 'Clash Display';
 }
+
 
 /* quote-section */
 .quote-section {
@@ -525,8 +553,14 @@ ul.itemAction li:hover {
   border-radius: 3px;
   backdrop-filter: blur(7px);
 }
+
+.date {
+    font-size: 20pt;
+    margin: 20px 0 0 0;
+}
+
 td.date {
-  width: 100px;
+  width: 100vw;
   text-align: start;
 }
 td.icon {
@@ -598,11 +632,11 @@ span.realoadBtn img {
   max-width: 100%;
 }
 @font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url(0c35d18bf06992036b69.woff2) format("woff2"), url(4d73cb90e394b34b7670.woff) format("woff");
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(0c35d18bf06992036b69.woff2) format("woff2"), url(4d73cb90e394b34b7670.woff) format("woff");
 }
 .material-icons {
   font-family: "Material Icons";
