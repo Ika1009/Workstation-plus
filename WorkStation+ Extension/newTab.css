@@ -52,6 +52,10 @@ body {
 
 .topBar {
     height: 33vh;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 50px;
 }
 
 .midBar {
@@ -77,7 +81,7 @@ body {
     vertical-align: central;
 
     width: 45%;
-    min-width: 500px;
+    min-width: 450px;
     height: auto;
     /*padding: 50px 60px;*/
 }
@@ -105,17 +109,19 @@ body {
 .search-section input {
   background-color: #7c7c7c8a;
   width: 100%;
+  height: 55px;
   outline: none;
   border: 1.5px solid #cbcbcb;
-  border-radius: 25px;
+  border-radius: 30px;
   transition: all 0.2s ease;
   padding: 10px 15px;
   color: #fff;
-  font-size: 24px;
+  font-size: 16pt;
 }
 
 .search-section input::placeholder {
   color: #ccc;
+  font-size: 16pt;
 }
 
 .search-section input:hover {
@@ -129,8 +135,8 @@ body {
   width: 60px;
   height: 29px;
   position: absolute;
-  right: 8px;
-  top: 11px;
+  right: 10px;
+  top: 12px;
   cursor: pointer;
   background: #ccc;
   display: flex;
@@ -202,8 +208,8 @@ body {
 }
 
 .time {
-  font-size: 60pt;
-  font-weight: bold;
+    font-size: 60pt;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
 }
 
 
@@ -233,9 +239,11 @@ body {
 
 /* menu style  */
 .menu {
-  position: absolute;
-  bottom: 10px;
-  color: #fff;
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    margin: 0 0 40px 0;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
 }
 
 .menu a {
@@ -560,9 +568,148 @@ ul.itemAction li:hover {
   backdrop-filter: blur(7px);
 }
 
-.date {
+.customizeButton {
+    width: auto;
+    height: auto;
+    border: solid;
+    border-color: #fff;
+    border-width: 2px;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 15px 25px 15px 25px;
+    color: #fff;
+    font-size: 16pt;
+    border-radius: 100px;
+    text-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px;
+
+    transition: opacity 0.25s;
+}
+
+.customizeButton:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.customizeButton:active {
+    opacity: 1;
+}
+
+.customizeButtonImg {
+    width: 18px;
+    margin: 0 5px 0 0;
+}
+
+.customizeSideBar {
+    position: absolute;
+    top: 50%;
+    transform: translate(0px, -50%);
+    right: 0;
+    width: 20vw;
+    min-width: 320px;
+    background-color: #fff;
+    height: 100%;
+    z-index: 1000;
+    opacity: 1;
+    padding: 40px 35px;
+}
+
+.customizeLogo {
     font-size: 20pt;
+    text-align: center;
+
+    justify-content: space-between;
+    display: flex;
+
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.customizeButtonExit {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+
+    background-color: transparent;
+    border: solid;
+    border-width: 2px;
+    border-color: black;
+
+    text-align: center;
+    padding: 0;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.customizeBackgroundTitle {
+    font-size: 14pt;
+    text-shadow: none;
+    margin-bottom: 50px;
+}
+
+.customizeBgS1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11pt;
+    text-shadow: none;
+    margin-bottom: 30px;
+}
+
+.customizeBgButton {
+    height: auto;
+    width: auto;
+    padding: 15px 15px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    display: flex;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+.customizeBgBttImg {
+    width: 15px;
+    padding: 0;
+    margin-left: 10px;
+    vertical-align: central;
+    opacity: 0.5;
+}
+
+.uploadBackground {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 30px;
+}
+
+.uploadBgButton {
+    height: 100%;
+    width: 100%;
+    font-size: 12pt;
+    border: none;
+    border-radius: 30px;
+    background-color: #f4f4f4;
+    color: #5864ac;
+    cursor: pointer;
+}
+
+.customizeBgSlider1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11pt;
+    text-shadow: none;
+}
+
+.backgroundSlider1 {
+    box-shadow: none;
+}
+
+.customizeLine1 {
+    margin: 30px 0 30px 0;
+}
+
+.date {
+    font-size: 18pt;
     margin: 20px 0 0 0;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
 }
 
 td.date {
@@ -1031,10 +1178,10 @@ ul.recentlyClosed__area li a {
 .sideBarLink__area{
     position: absolute;
     top: 50%;
-    right: 0px;
+    right: 50px;
     transform: translate(0px, -50%);
     background: #fff;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px 5px 5px 5px;
     box-shadow: 0px 0px 4px #0000007a;
     z-index: 999;
     text-shadow: none;
