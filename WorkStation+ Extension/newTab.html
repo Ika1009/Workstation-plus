@@ -43,7 +43,9 @@
       <div class="customizeSideBar">
           <div class="customizeLogo">
               <p style="margin: 0; margin-top: -6px;">CUSTOMIZATION</p>
-              <button class="customizeButtonExit">&#10005;</button>
+              <button class="customizeButtonExit">
+                  <img class="cancelImage" src="images/cancel.png"/>
+              </button>
           </div>
 
           <div class="customizeLine"><hr style="border-top: 1px solid #e9e9e9;" /></div>
@@ -51,7 +53,7 @@
           <div class="customizeBackgroundTitle">
               <p>BACKGROUND</p>
           </div>
-          <div class="customizeBgS1">
+          <div class="customizeTextButton">
               <p>Backgoround Type</p>
               <button class="customizeBgButton">Default<img class="customizeBgBttImg" src="images\down-arrow.png" /></button>
           </div>
@@ -60,11 +62,11 @@
           </div>
           <div class="customizeBgSlider">
               <p>Blur intensity</p>
-              <input type="range" class="backgroundSlider" />
+              <input type="range" class="backgroundSlider" min="0" max="100" step="1" value="0" />
           </div>
           <div class="customizeBgSlider">
               <p>Brightness</p>
-              <input type="range" class="backgroundSlider" />
+              <input type="range" class="backgroundSlider" min="0" max="100" step="1" value="50" />
           </div>
 
           <div class="customizeLine"><hr style="border-top: 1px solid #e9e9e9;" /></div>
@@ -74,13 +76,63 @@
           </div>
           <div class="customizeTextInput">
               <p>Name</p>
-              <input class="customizeInput"/>
+              <input class="customizeInput" placeholder="Example:   Google" />
+          </div>
+          <div class="customizeTextInput">
+              <p>URL</p>
+              <input class="customizeInput" placeholder="Example:   Google.com" />
+          </div>
+          <div style="margin-top: 15px">
+              <button class="customizeActionButton">Add</button>
           </div>
 
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div class="customizeLine"><hr style="border-top: 1px solid #e9e9e9;" /></div>
+
+          <div class="customizeBackgroundTitle">
+              <p>WEATHER &#160 & &#160 GREETINGS</p>
+          </div>
+          <div class="customizeTextButton">
+              <p>Style</p>
+              <button class="customizeStyleButton">Large<img class="customizeBgBttImg" src="images\down-arrow.png" /></button>
+          </div>
+
+          <div class="customizeLine"><hr style="border-top: 1px solid #e9e9e9;" /></div>
+
+          <div class="customizeBackgroundTitle">
+              <p>TIME &#160 & &#160 DATE</p>
+          </div>
+          <div class="customizeTextCheck">
+              <p>Enable</p>
+              <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+              </label>
+          </div>
+          <div class="customizeTextCheck">
+              <p>Geolocation</p>
+              <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+              </label>
+          </div>
+          <div class="customizeTextCheck">
+              <p>12 - Hour Time</p>
+              <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+              </label>
+          </div>
+          <div class="customizeTextInput">
+              <p style="margin-top: 0">Time Zone</p>
+              <button class="timeZoneButton">Placeholder Time Zone</button>
+          </div>
+
+          <div class="customizeLine"><hr style="border-top: 1px solid #e9e9e9;" /></div>
+
+          <div class="customizeSaveDiscard">
+              <button class="customizeSaveButton">Save Changes</button>
+              <button class="customizeDiscardButton">Discard Changes</button>
+          </div>
       </div>
 
     <!--<div class="midBar">
