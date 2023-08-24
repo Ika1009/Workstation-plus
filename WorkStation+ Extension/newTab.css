@@ -122,6 +122,8 @@ body {
     padding: 10px 15px;
     color: #fff;
     font-size: 16pt;
+
+    transition: opacity 0.2s ease-in-out;
 }
 
 .search-section input::placeholder {
@@ -151,6 +153,8 @@ body {
   align-items: center;
   padding: 7px 12px;
   border-radius: 15px;
+
+  transition: opacity 0.2s ease-in-out;
 }
 
 .searchIcon img {
@@ -217,6 +221,8 @@ body {
 .time {
     font-size: 60pt;
     text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+
+    transition: opacity 0.2s ease-in-out;
 }
 
 
@@ -252,6 +258,8 @@ body {
     color: #fff;
     margin: 0 0 40px 0;
     text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+
+    transition: opacity 0.2s ease-in-out;
 }
 
 .menu a {
@@ -963,6 +971,8 @@ input:checked + .slider:before {
     font-size: 18pt;
     margin-top: 20px;
     text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+
+    transition: opacity 0.2s ease-in-out;
 }
 
 td.date {
@@ -1512,6 +1522,42 @@ ul.recentlyClosed__area li a {
 
 @media (max-height: 820px) {
     .sideBarLink__area {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@media (max-height: 625px) {
+    .menu {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@media (max-height: 505px) {
+    .search-section input {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .searchIcon {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@media (max-height: 350px) {
+    .date {
+        opacity: 0;
+    }
+
+    .time {
+        opacity: 0;
+    }
+}
+
+@media (max-height: 150px) {
+    .customizeButton {
         opacity: 0;
         pointer-events: none;
     }
