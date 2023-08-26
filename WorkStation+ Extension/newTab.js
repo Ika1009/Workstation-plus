@@ -17657,4 +17657,70 @@
             }), 1e3), new me(".weatherArea"), (new d).init(), (new _e).init()
         })()
     })()
+
+    /* Ovde Nixa pocinje da js-uje */
+
+    //document.addEventListener('DOMContentLoaded', function () {
+    //    const customizeOpen = document.getElementById('customizeOpen');
+    //    const customizeMenu = document.getElementById('customizeMenu');
+
+    //    customizeOpen.addEventListener('click', function () {
+    //        customizeMenu.style.visibility = 'visible';
+    //    });
+    //});
+
+    //document.addEventListener('DOMContentLoaded', function () {
+    //    const customizeClose = document.getElementById('customizeClose');
+    //    const customizeMenu = document.getElementById('customizeMenu');
+
+    //    customizeClose.addEventListener('click', function () {
+    //        customizeMenu.style.visibility = 'hidden';
+    //    });
+    //});;
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const customizeOpenButton = document.getElementById('customizeOpen');
+        const customizeCloseButton = document.getElementById('customizeClose');
+        const customizeDiscardButton = document.getElementById('customizeDiscard');
+        const customizeMenu = document.getElementById('customizeMenu');
+
+        customizeOpenButton.addEventListener('click', function () {
+            /*customizeMenu.style.opacity = '1';*/
+            customizeMenu.style.transform = 'translateX(0)';
+        });
+
+        customizeCloseButton.addEventListener('click', function () {
+            customizeMenu.style.transform = 'translateX(100%)';
+            /*customizeMenu.style.opacity = '0';*/
+        });
+
+        customizeDiscardButton.addEventListener('click', function () {
+            customizeMenu.style.transform = 'translateX(100%)';
+            /*customizeMenu.style.opacity = '0';*/
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const noteCancelButton = document.getElementById('noteCancelButton');
+        const noteBackgroundId = document.getElementById('noteBackgroundId');
+
+        noteCancelButton.addEventListener('click', function () {
+            noteBackgroundId.style.visibility = 'hidden';
+        });
+    });
+
+    const slider = document.querySelector(".backgroundSlider");
+    const sliderButton = document.getElementById("sliderButton");
+
+    slider.addEventListener("input", function () {
+        const min = parseInt(slider.min);
+        const max = parseInt(slider.max);
+        const value = parseInt(slider.value);
+        const offset = (value - min) / (max - min) * 100;
+        const newPosition = offset;
+
+        sliderButton.style.transform = `translateX(${newPosition}%)`;
+    });
+
+
 })();

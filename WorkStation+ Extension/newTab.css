@@ -33,7 +33,6 @@ body {
   opacity: 0;
 }
 
-
 .container {
   display: flex;
   justify-content: center;
@@ -652,9 +651,9 @@ ul.itemAction li:hover {
 
 .customizeSideBar {
     position: absolute;
-    top: 50%;
-    transform: translate(0px, -50%);
+    top: 0;
     right: 0;
+    transform: translateX(100%); /* Start off-screen to the right */
     width: 20vw;
     min-width: 320px;
     background-color: #fff;
@@ -662,22 +661,21 @@ ul.itemAction li:hover {
     z-index: 1000;
     opacity: 1;
     padding: 40px 35px;
+    /*opacity: 0;*/
     overflow: scroll;
-
-    visibility: hidden;
+    transition: transform 0.25s ease-out, opacity 0.2s ease-in;
 }
+
 
 .customizeSideBar::-webkit-scrollbar {
     width: 0;
 }
 
 .customizeLogo {
+    display: flex;
+    justify-content: space-between;
     font-size: 20pt;
     text-align: center;
-
-    justify-content: space-between;
-    display: flex;
-
     text-shadow: none;
     box-shadow: none;
 }
@@ -1144,6 +1142,77 @@ body{
     user-select: none;
 }
 
+.newNote {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    z-index: 1002;
+}
+
+.addNote {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: 'Comic Sans MS';
+    font-size: 14pt;
+    padding: 30px;
+    padding-bottom: 50px;
+    resize: none;
+    background: linear-gradient(to bottom, #fceca4, #fcec7c);
+    border-radius: 20px;
+}
+
+.addNote::placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+.addNote::-webkit-scrollbar {
+    width: 0;
+}
+
+.noteButtons {
+    display: flex;
+    position: absolute;
+    justify-content: end;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    padding: 15px;
+    padding-right: 5px;
+}
+
+.noteActionButton {
+    align-items: center;
+    justify-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: #f4f4f4f4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.noteBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
 .sticky-note {
     position: fixed;
     cursor: move;
@@ -1506,13 +1575,6 @@ ul.recentlyClosed__area li a {
     }
 }
 
-@media (max-height: 635px) {
-    .taskNoteButtons {
-        opacity: 0;
-        pointer-events: none;
-    }
-}
-
 @media (max-width: 660px) {
     .sideBarLink__area {
         opacity: 0;
@@ -1529,6 +1591,11 @@ ul.recentlyClosed__area li a {
 
 @media (max-height: 625px) {
     .menu {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .taskNoteButtons {
         opacity: 0;
         pointer-events: none;
     }
