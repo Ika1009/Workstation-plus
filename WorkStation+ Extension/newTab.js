@@ -17722,5 +17722,55 @@
         sliderButton.style.transform = `translateX(${newPosition}%)`;
     });
 
+    document.addEventListener('DOMContentLoaded', function () {
+        const stickyNoteButton = document.getElementById("stickyNoteButton");
+        const noteText = document.getElementById("noteText");
+        const noteCheckButton = document.getElementById("noteCheckButton");
+        const noteCancelButton = document.getElementById("noteCancelButton");
+        const noteEditButton = document.getElementById("noteEditButton");
+        const noteChangingDiv = document.getElementById("noteChangingDiv");
+        const noteEditDiv = document.getElementById("noteEditDiv");
+        const stickyNoteArea = document.getElementById("stickyNoteArea");
+        const notePlusImg = document.getElementById("notePlusImg");
+
+        stickyNoteButton.addEventListener('click', function () {
+            if (notePlusImg.style.visibility = "visible") {
+                notePlusImg.style.display = "none"
+                stickyNoteArea.style.visibility = "visible";
+                noteChangingDiv.style.visibility = "visible";
+            }             
+        });
+
+        noteCheckButton.addEventListener('click', function () {
+            noteChangingDiv.style.visibility = "hidden";
+            noteEditDiv.style.visibility = "visible";
+            noteText.disabled = true;
+
+            localStorage.setItem('textareaValue', noteText.value);
+        });
+
+        noteCancelButton.addEventListener('click', function () {
+            stickyNoteArea.style.visibility = "hidden";
+            noteChangingDiv.style.visibility = "hidden";
+            noteText.value = "";
+            noteText.disabled = false;
+            notePlusImg.style.display = "flex";
+        });
+
+        noteEditButton.addEventListener('click', function () {
+            noteEditDiv.style.visibility = "hidden";
+            noteChangingDiv.style.visibility = "visible";
+            noteText.disabled = false;
+        });
+
+
+        // Load the saved value from localStorage when the page loads
+        window.addEventListener('load', function () {
+            const savedValue = localStorage.getItem('textareaValue');
+            if (savedValue) {
+                noteText.value = savedValue;
+            }
+        });
+    });
 
 })();

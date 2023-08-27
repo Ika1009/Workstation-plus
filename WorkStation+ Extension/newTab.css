@@ -104,7 +104,7 @@ body {
     padding: 10px 0 0 0;
 }
 .search-section form {
-  width: 73%;
+  width: 75%;
   margin: auto;
 }
 .search-section input {
@@ -1142,75 +1142,67 @@ body{
     user-select: none;
 }
 
-.newNote {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 300px;
-    z-index: 1002;
+.noteArea {
+    position: absolute;
+    height: 275px;
+    left: 50px;
+    top: 35%;
+    transition: opacity 0.3s;
 }
 
 .addNote {
-    height: 100%;
+    position: relative;
+    width: 275px;
+    height: 275px;
+}
+
+.noteTextArea {
     width: 100%;
+    height: 100%;
+    resize: none;
     border: none;
     outline: none;
+    box-shadow: none;
+    border-radius: 15px;
+    padding: 25px 20px;
+    padding-bottom: 60px;
+    font-size: 12pt;
     font-family: 'Comic Sans MS';
-    font-size: 14pt;
-    padding: 30px;
-    padding-bottom: 50px;
-    resize: none;
     background: linear-gradient(to bottom, #fceca4, #fcec7c);
-    border-radius: 20px;
 }
 
-.addNote::placeholder {
-    color: black;
-    opacity: 0.5;
-}
-
-.addNote::-webkit-scrollbar {
+.noteTextArea::-webkit-scrollbar {
     width: 0;
 }
 
-.noteButtons {
-    display: flex;
-    position: absolute;
-    justify-content: end;
-    align-items: center;
-    height: auto;
-    width: 100%;
-    bottom: 0;
-    padding: 15px;
-    padding-right: 5px;
+.noteTextArea::placeholder {
+    color: rgb(0, 0, 0, 0.5);
 }
 
-.noteActionButton {
-    align-items: center;
-    justify-items: center;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    background-color: #f4f4f4f4;
-    color: white;
+.noteButtons {
+    position: absolute;
+    height: fit-content;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+}
+
+.noteActionButtons {
     border: none;
     border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    padding: 0;
     cursor: pointer;
-    margin-right: 10px;
+    transition: opacity 0.05s;
 }
 
-.noteBackground {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.75);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1001;
+.noteActionButtons:hover {
+    opacity: 0.75;
+}
+
+.noteActionButtons:active {
+    opacity: 0.9;
 }
 
 .sticky-note {
@@ -1611,6 +1603,11 @@ ul.recentlyClosed__area li a {
         opacity: 0;
         pointer-events: none;
     }
+
+    .noteArea {
+        opacity: 0;
+        pointer-events: none;
+    }
 }
 
 @media (max-height: 350px) {
@@ -1625,6 +1622,13 @@ ul.recentlyClosed__area li a {
 
 @media (max-height: 150px) {
     .customizeButton {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@media (max-width: 995px) {
+    .noteArea {
         opacity: 0;
         pointer-events: none;
     }
