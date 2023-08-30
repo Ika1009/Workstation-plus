@@ -53,7 +53,7 @@ body {
     height: 33vh;
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     padding: 50px;
     padding-bottom: 0;
 }
@@ -109,7 +109,7 @@ body {
 }
 .search-section input {
     /*background-color: #7c7c7c8a;*/
-    background-color: rgb(255, 255, 255, 0.18);
+    background-color: rgb(255, 255, 255, 0.25);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px;
     width: 100%;
     height: 55px;
@@ -617,6 +617,7 @@ ul.itemAction li:hover {
 .forecastList{
   position: absolute;
   display: none;
+  left: 50px;
 }
 .forecastItem img {
   width: 27px;
@@ -631,6 +632,15 @@ ul.itemAction li:hover {
   text-align: center;
   border-radius: 3px;
   backdrop-filter: blur(7px);
+}
+
+.weatherArea {
+    background-color: rgb(255, 255, 255, 0.25);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .customizeButton {
