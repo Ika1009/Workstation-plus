@@ -497,6 +497,7 @@ a.cencelBtn img {
 
 .taskItem {
   position: relative;
+  color: black;
 }
 
 .taskItem input[type=checkbox] {
