@@ -1076,7 +1076,16 @@ span.realoadBtn img {
   max-width: 100%;
 }
 
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(0c35d18bf06992036b69.woff2) format("woff2"), url(4d73cb90e394b34b7670.woff) format("woff");
+}
+
 .material-icons {
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -1092,8 +1101,15 @@ span.realoadBtn img {
   text-rendering: optimizeLegibility;
   font-feature-settings: "liga";
 }
-
+@font-face {
+  font-family: "Material Icons Outlined";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(6f420cf17cc0d7676fad.woff2) format("woff2"), url(f882956fd323fd322f31.woff) format("woff");
+}
 .material-icons-outlined {
+  font-family: "Material Icons Outlined";
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -1109,8 +1125,15 @@ span.realoadBtn img {
   text-rendering: optimizeLegibility;
   font-feature-settings: "liga";
 }
-
+@font-face {
+  font-family: "Material Icons Round";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(c380809fd3677d7d6903.woff2) format("woff2"), url(5d681e2edae8c60630db.woff) format("woff");
+}
 .material-icons-round {
+  font-family: "Material Icons Round";
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -1127,7 +1150,15 @@ span.realoadBtn img {
   font-feature-settings: "liga";
 }
 
+@font-face {
+  font-family: "Material Icons Sharp";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(219aa9140e099e6c72ed.woff2) format("woff2"), url(3a4004a46a653d4b2166.woff) format("woff");
+}
 .material-icons-sharp {
+  font-family: "Material Icons Sharp";
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -1144,7 +1175,15 @@ span.realoadBtn img {
   font-feature-settings: "liga";
 }
 
+@font-face {
+  font-family: "Material Icons Two Tone";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(4ef4218c522f1eb6b5b1.woff2) format("woff2"), url(3baa5b8f3469222b822d.woff) format("woff");
+}
 .material-icons-two-tone {
+  font-family: "Material Icons Two Tone";
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
