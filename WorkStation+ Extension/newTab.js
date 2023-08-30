@@ -17221,7 +17221,7 @@
                 this.isAnyHidden() ? (o()(".sticky-note__show-all").show(), o()(".sticky-note__hide-all").hide()) : (o()(".sticky-note__show-all").hide(), o()(".sticky-note__hide-all").show()), o()(".sticky-note").remove();
                 for (let e = 0; e < this.list.length; e++) {
                     const t = this.list[e];
-                    o()("body").append(`\n                <div id="sticky-note-${t.id}" class="sticky-note" style="top: ${t.position.top}px; left: ${t.position.left}px; background-color: ${t.color}; display: ${t.hidden?"none":"block"}">\n                    <div class="sticky-note__header">\n                        <span class="material-icons sticky-note__color">more_vert</span>\n                        <ul class="sticky-note__color-list">\n                            <li class="sticky-note__color-item" data-color="#fff475">Yellow</li>\n                            <li class="sticky-note__color-item" data-color="#C7E1F4">Blue</li>\n                            <li class="sticky-note__color-item" data-color="#f5f5f5">Gray</li>\n                            <li class="sticky-note__color-item" data-color="#f28b82">Red</li>\n                        </ul>\n                        <span class="material-icons sticky-note__close">delete</span>\n                    </div>\n                    <div class="sticky-note__content">\n                        <textarea class="sticky-note__textarea" style=" width: ${t.size.width}px; height: ${t.size.height}px;">${t.text}</textarea>\n                    </div>\n                </div>\n            `), o()(`#sticky-note-${t.id}`).draggable()
+                    o()("body").append(`\n                <div id="sticky-note-${t.id}" class="sticky-note" style="top: ${t.position.top}px; left: ${t.position.left}px; background-color: ${t.color}; display: ${t.hidden ? "none" : "block"}; border-radius: 10px">\n                    <div class="sticky-note__header">\n                        <span class="material-icons sticky-note__color">colors</span>\n                        <ul class="sticky-note__color-list">\n                            <li class="sticky-note__color-item" data-color="#fff475">Yellow</li>\n                            <li class="sticky-note__color-item" data-color="#C7E1F4">Blue</li>\n                            <li class="sticky-note__color-item" data-color="#f5f5f5">Gray</li>\n                            <li class="sticky-note__color-item" data-color="#f28b82">Red</li>\n                        </ul>\n                        <span class="material-icons sticky-note__close">delete</span>\n                    </div>\n                    <div class="sticky-note__content">\n                        <textarea class="sticky-note__textarea" style=" width: ${t.size.width}px; height: ${t.size.height}px; border-radius: 0 0 10px 10px; font-size: 13pt; font-family: 'Comic Sans MS'; padding: 10px;">${t.text}</textarea>\n                    </div>\n                </div>\n            `), o()(`#sticky-note-${t.id}`).draggable()
                 }
             }
             add(e) {
@@ -17722,55 +17722,57 @@
         sliderButton.style.transform = `translateX(${newPosition}%)`;
     });
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const stickyNoteButton = document.getElementById("stickyNoteButton");
-        const noteText = document.getElementById("noteText");
-        const noteCheckButton = document.getElementById("noteCheckButton");
-        const noteCancelButton = document.getElementById("noteCancelButton");
-        const noteEditButton = document.getElementById("noteEditButton");
-        const noteChangingDiv = document.getElementById("noteChangingDiv");
-        const noteEditDiv = document.getElementById("noteEditDiv");
-        const stickyNoteArea = document.getElementById("stickyNoteArea");
-        const notePlusImg = document.getElementById("notePlusImg");
+    // Nixina verzija sticky-note-a
 
-        stickyNoteButton.addEventListener('click', function () {
-            if (notePlusImg.style.visibility = "visible") {
-                notePlusImg.style.display = "none"
-                stickyNoteArea.style.visibility = "visible";
-                noteChangingDiv.style.visibility = "visible";
-            }             
-        });
+    //document.addEventListener('DOMContentLoaded', function () {
+    //    const stickyNoteButton = document.getElementById("stickyNoteButton");
+    //    const noteText = document.getElementById("noteText");
+    //    const noteCheckButton = document.getElementById("noteCheckButton");
+    //    const noteCancelButton = document.getElementById("noteCancelButton");
+    //    const noteEditButton = document.getElementById("noteEditButton");
+    //    const noteChangingDiv = document.getElementById("noteChangingDiv");
+    //    const noteEditDiv = document.getElementById("noteEditDiv");
+    //    const stickyNoteArea = document.getElementById("stickyNoteArea");
+    //    const notePlusImg = document.getElementById("notePlusImg");
 
-        noteCheckButton.addEventListener('click', function () {
-            noteChangingDiv.style.visibility = "hidden";
-            noteEditDiv.style.visibility = "visible";
-            noteText.disabled = true;
+    //    stickyNoteButton.addEventListener('click', function () {
+    //        if (notePlusImg.style.visibility = "visible") {
+    //            notePlusImg.style.display = "none"
+    //            stickyNoteArea.style.visibility = "visible";
+    //            noteChangingDiv.style.visibility = "visible";
+    //        }             
+    //    });
 
-            localStorage.setItem('textareaValue', noteText.value);
-        });
+    //    noteCheckButton.addEventListener('click', function () {
+    //        noteChangingDiv.style.visibility = "hidden";
+    //        noteEditDiv.style.visibility = "visible";
+    //        noteText.disabled = true;
 
-        noteCancelButton.addEventListener('click', function () {
-            stickyNoteArea.style.visibility = "hidden";
-            noteChangingDiv.style.visibility = "hidden";
-            noteText.value = "";
-            noteText.disabled = false;
-            notePlusImg.style.display = "flex";
-        });
+    //        localStorage.setItem('textareaValue', noteText.value);
+    //    });
 
-        noteEditButton.addEventListener('click', function () {
-            noteEditDiv.style.visibility = "hidden";
-            noteChangingDiv.style.visibility = "visible";
-            noteText.disabled = false;
-        });
+    //    noteCancelButton.addEventListener('click', function () {
+    //        stickyNoteArea.style.visibility = "hidden";
+    //        noteChangingDiv.style.visibility = "hidden";
+    //        noteText.value = "";
+    //        noteText.disabled = false;
+    //        notePlusImg.style.display = "flex";
+    //    });
+
+    //    noteEditButton.addEventListener('click', function () {
+    //        noteEditDiv.style.visibility = "hidden";
+    //        noteChangingDiv.style.visibility = "visible";
+    //        noteText.disabled = false;
+    //    });
 
 
-        // Load the saved value from localStorage when the page loads
-        window.addEventListener('load', function () {
-            const savedValue = localStorage.getItem('textareaValue');
-            if (savedValue) {
-                noteText.value = savedValue;
-            }
-        });
-    });
+    //    // Load the saved value from localStorage when the page loads
+    //    window.addEventListener('load', function () {
+    //        const savedValue = localStorage.getItem('textareaValue');
+    //        if (savedValue) {
+    //            noteText.value = savedValue;
+    //        }
+    //    });
+    //});
 
 })();
