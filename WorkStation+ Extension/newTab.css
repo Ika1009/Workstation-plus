@@ -621,6 +621,11 @@ ul.itemAction li:hover {
   border: none;
   cursor: pointer;
 }
+
+.weatherArea.expanded {
+    height: 160px;
+}
+
 .forecastList{
   position: absolute;
   display: none;
@@ -1296,7 +1301,7 @@ body{
 .sticky-note {
     position: fixed;
     cursor: move;
-    box-shadow: 0px 0px 12px 1px #0000004d;
+    /*box-shadow: 0px 0px 12px 1px #0000004d;*/
     text-shadow: none;
 }
 .sticky-note__header{
@@ -1312,7 +1317,7 @@ body{
     gap: 5px;
 } */
 .sticky-note__header span {
-    color: #7e7e7e;
+    color: rgb(77, 23, 37, 0.3);
     text-decoration: none;
     font-size: 20px;
     margin: 0 5px;
@@ -1349,6 +1354,7 @@ body{
     min-height: 110px;
     max-width: 600px;
     max-height: 550px;
+    color: rgb(0, 0, 0, 0.5);
 }
 
 /*.sticky-note textarea::-webkit-scrollbar {

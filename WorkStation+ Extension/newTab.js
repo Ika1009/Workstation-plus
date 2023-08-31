@@ -17186,13 +17186,38 @@
             }
             setEvent() {
                 const e = this;
+                const storageKey = "weatherAreaExpanded";
+
+                navigator.permissions.query({ name: 'geolocation' }).then(permissionStatus => {
+                    permissionStatus.onchange = () => {
+                        localStorage.setItem(storageKey, permissionStatus.state);
+                    };
+                });
+
+                if (localStorage.getItem(storageKey) === "granted") {
+                    e.weatherArea.addClass("expanded");
+                }
+
                 o()(document).on("click", ".forecastIcon", (function() {
                     o()(this).toggleClass("active"), o()(".forecastList").toggle()
                 })), o()(document).on("click", ".swicher", (async function() {
                     o()(".wetherLoading").toggle(), e.isCelsius = !e.isCelsius, await e.getData(), e.renderUi(), e.saveTemperatureUnit()
-                })), o()(document).on("click", ".weatherArea button", (async function() {
-                    navigator.geolocation && await e.getUserLocation(), e.weatherArea.html('<img src="images/loading-gif.gif" width="20px" style="display:block; margin: auto">'), await e.getData(), await e.getCityName(), e.renderUi()
-                }))
+                })),// o()(document).on("click", ".weatherArea button", (async function() {
+                    //navigator.geolocation && await e.getUserLocation(), e.weatherArea.html('<img src="images/loading-gif.gif" width="20px" style="display:block; margin: auto">'), await e.getData(), await e.getCityName(), e.renderUi()
+                //}))
+                o()(document).on("click", ".weatherArea button", (async function () {
+                    navigator.geolocation && await e.getUserLocation();
+                    e.weatherArea.html('<img src="images/loading-gif.gif" width="20px" style="display:block; margin: auto">');
+                    await e.getData();
+                    await e.getCityName();
+                    e.renderUi();
+
+                    // Toggle the "expanded" class on the .weatherArea element
+                    e.weatherArea.toggleClass("expanded");
+
+                    // Save the expanded state to localStorage
+                    localStorage.setItem(storageKey, e.weatherArea.hasClass("expanded") ? "granted" : "denied");
+                }));
             }
             saveTemperatureUnit() {
                 chrome.storage.sync.set({
