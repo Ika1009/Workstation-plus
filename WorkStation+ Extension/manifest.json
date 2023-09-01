@@ -13,7 +13,7 @@
    },
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoIQ3m4ygiqYLGiy9xuwEYf7IWr3C+YAuB6R5aYUZNr0YzlqiQSCfbYUWCXCsBPwj/8ZwvFgXuG686nEhJMeNdU9fC68js3vqTfcectSeGkTlDRngeSgIa4/1wzNl977LrwT2YPS758nPNmIhehkPnhuTArmHPm/QXP5Sf/1xOl3fT5Oll/Qmx5jmA4geOHGlAiiXx353bHqja6+hHVV51ikhYJiGXy1R2p4msQ84HPjPx7BSwgDu9+97PKqPFJ3ewLU39wME5aVKknZfLCe/UFxTN5Bfd3Qg+Moq8KU9CV5MBk/bXcsHGMba05tkZdj2I/CQUMoZ4iizYKIeIRvccQIDAQAB",
    "manifest_version": 3,
-   "name": "Workstation Plus",
+   "name": "Workstation+",
    "optional_permissions": [ "topSites", "favicon", "history" ],
    "permissions": [ "storage", "unlimitedStorage" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
