@@ -342,11 +342,13 @@ body {
   bottom: 80px;
   width: 350px;
   height: fit-content;
-  border-radius: 3px;
+  max-height: 500px;
+  /*overflow: scroll;*/
+  border-radius: 15px;
   display: none;
   text-shadow: none;
   z-index: 9999;
-  box-shadow: 0px 0px 12px 1px #0000004d;
+  /*box-shadow: 0px 0px 12px 1px #0000004d;*/
 }
 
 .tasksListArea::before {
@@ -501,6 +503,7 @@ a.cencelBtn img {
 .taskItem {
   position: relative;
   color: black;
+  /*overflow: scroll;*/
 }
 
 .taskItem input[type=checkbox] {
@@ -515,6 +518,7 @@ a.cencelBtn img {
 
 .taskItem img {
   width: 18px;
+  margin-left: 5px;
 }
 
 .taskItem .right {
@@ -595,8 +599,8 @@ ul.itemAction li:hover {
   text-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px;
 }
 .currentWeather .icon {
-    display: flex;
-    align-self: end;
+  display: flex;
+  align-self: center;
   margin-right: 10px;
 }
 .weatherArea .info .temp-value{
