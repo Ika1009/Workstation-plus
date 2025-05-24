@@ -53,16 +53,18 @@
 | **OpenWeather API** | Weather data fetching                      |
 | **Chrome Extension API** | Permissions, tab override, local storage |
 
+### 🖼️ Extension UI
+![Extension UI](promo%20(2).png)
+
 ---
 
-## 📸 Gallery
+## 📸 Website Gallery
 
 Below are screenshots of the extension and the promotional site in action:
 ![Website UI](new%20website.png)
 ![Website UI](new%20website%20(1).png)
 ![Website UI](new%20website%20(2).png)
 
-### 🖼️ Extension UI
-![Extension UI](promo%20(2).png)
+
 
 This was made for a Fiverr client.
