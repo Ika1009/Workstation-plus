@@ -62,4 +62,4 @@ Below are screenshots of the extension and the promotional site in action:
 ### 🖼️ Extension UI
 ![Extension UI](promo%20(2).png)
 
-### 🧾 Task
+This was made for a Fiverr client.
