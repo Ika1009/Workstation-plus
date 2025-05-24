@@ -58,6 +58,9 @@
 ## 📸 Gallery
 
 Below are screenshots of the extension and the promotional site in action:
+![Website UI](new%20website.png)
+![Website UI](new%20website%20(1).png)
+![Website UI](new%20website%20(2).png)
 
 ### 🖼️ Extension UI
 ![Extension UI](promo%20(2).png)
