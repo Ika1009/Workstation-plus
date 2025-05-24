@@ -38,6 +38,8 @@
   - Adjust layout preferences
 - Built-in settings panel for easy UX customization
 
+![Extension UI](promo%20(2).png)
+
 ---
 
 ## 💻 Technologies Used
@@ -58,6 +60,6 @@
 Below are screenshots of the extension and the promotional site in action:
 
 ### 🖼️ Extension UI
-![Extension UI](promo%20(2).png)
+![Extension UI](promo%20(3).png)
 
 ### 🧾 Task
